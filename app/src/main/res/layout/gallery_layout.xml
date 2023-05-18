@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/movie_cover_img"
+        android:layout_width="100dp"
+        android:layout_height="144dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/movie_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="text_view"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/movie_cover_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/movie_year_country_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/movie_year"
+        android:textColor="@color/white_nerf"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/movie_cover_img"
+        app:layout_constraintTop_toBottomOf="@+id/movie_name_txt" />
+
+    <TextView
+        android:id="@+id/genre_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/genre"
+        android:textColor="@color/white_nerf"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/movie_cover_img"
+        app:layout_constraintTop_toBottomOf="@+id/movie_year_country_txt" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:cardBackgroundColor="#8BC34A"
+        app:cardCornerRadius="25dp"
+        app:contentPadding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/movie_cover_img"
+        app:layout_constraintStart_toEndOf="@+id/movie_cover_img">
+
+        <TextView
+            android:id="@+id/rating_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/_9_0"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

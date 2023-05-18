@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#1E1E1E</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_nerf">#D1D1D1</color>
+    <color name="main_color">#EF3A01</color>
+    <color name="bottom_nav_color">#1C1A19</color>
+    <color name="bottom_nav_icon_text_color">#B7B7B7</color>
+    <color name="add_review_color">#282828</color>
+</resources>
