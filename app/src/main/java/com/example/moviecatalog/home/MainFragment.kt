@@ -9,13 +9,17 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.moviecatalog.Preferences
 import com.example.moviecatalog.R
 import com.example.moviecatalog.databinding.FragmentMainBinding
+import com.example.moviecatalog.home.GalleryAdapter
 import com.example.moviecatalog.login.LoginActivity
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null;
@@ -24,6 +28,10 @@ class MainFragment : Fragment() {
     lateinit var viewModel: MainViewModel
 
     var token = ""
+
+    var galleryAdapter: GalleryAdapter? = null
+
+    var movieId: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,7 +53,30 @@ class MainFragment : Fragment() {
         binding.galleryRv.layoutManager = LinearLayoutManager(context)
         binding.favRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
+        galleryAdapter = context?.let { GalleryAdapter(it) }
 
+        binding.galleryRv.adapter = galleryAdapter
+
+        galleryAdapter?.addLoadStateListener {
+            if (it.source.refresh is LoadState.NotLoading) {
+                binding.progressBar4.isVisible = false
+                binding.mainLay.isVisible = true
+            } else {
+                binding.progressBar4.isVisible = true
+                binding.mainLay.isVisible = false
+            }
+        }
+
+    }
+    override fun onResume() {
+        super.onResume()
+        lifecycleScope.launch {
+            viewModel.getMovies()
+
+            viewModel.movies.collectLatest {
+                galleryAdapter?.submitData(it)
+            }
+        }
     }
 
 }
