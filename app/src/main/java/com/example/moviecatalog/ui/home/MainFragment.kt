@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide
 import com.example.moviecatalog.Preferences
 import com.example.moviecatalog.R
 import com.example.moviecatalog.databinding.FragmentMainBinding
-import com.example.moviecatalog.home.GalleryAdapter
+import com.example.moviecatalog.ui.home.GalleryAdapter
 import com.example.moviecatalog.login.LoginActivity
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -65,6 +65,12 @@ class MainFragment : Fragment() {
                 binding.progressBar4.isVisible = true
                 binding.mainLay.isVisible = false
             }
+        }
+
+        viewModel.moviesData.observe(viewLifecycleOwner){
+            val bannerMovie = it.movies.first()
+            Glide.with(view).load(bannerMovie.poster).placeholder(R.drawable.placeholder).into(binding.mainMovieImg)
+            movieId = bannerMovie.id
         }
 
     }

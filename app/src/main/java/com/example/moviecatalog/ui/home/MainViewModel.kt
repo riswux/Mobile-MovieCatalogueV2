@@ -9,7 +9,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import com.example.moviecatalog.apiservice.ApiConfig
 import com.example.moviecatalog.apiservice.response.MoviesResponse
-import com.example.moviecatalog.home.MovieDataSource
+import com.example.moviecatalog.ui.home.MovieDataSource
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {

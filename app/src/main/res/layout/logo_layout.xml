@@ -17,7 +17,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/moviecatalog"
+        android:text="MovieCatalog"
         android:textColor="@color/main_color"
         android:textSize="26sp"
         android:textStyle="bold"
