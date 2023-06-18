@@ -2,9 +2,11 @@ package com.example.moviecatalog.apiservice
 
 import com.example.moviecatalog.apiservice.body.LoginBody
 import com.example.moviecatalog.apiservice.body.RegisterBody
+import com.example.moviecatalog.apiservice.body.UserBody
 import com.example.moviecatalog.apiservice.response.LogoutResponse
 import com.example.moviecatalog.apiservice.response.MovieDetailResponse
 import com.example.moviecatalog.apiservice.response.MoviesResponse
+import com.example.moviecatalog.apiservice.response.UserResponse
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.Body
@@ -44,5 +46,16 @@ interface ApiService {
         @Path("id") id: String
     ): MovieDetailResponse
 
+
+    @GET("api/account/profile")
+    suspend fun getProfile(
+        @Header("Authorization") token: String,
+    ): UserResponse
+
+    @PUT("api/account/profile")
+    fun editProfile(
+        @Header("Authorization") token: String,
+        @Body body: UserBody
+    ): Call<ResponseBody>
 
 }
