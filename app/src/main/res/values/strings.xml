@@ -1,15 +1,10 @@
 <resources>
     <string name="app_name">MovieCatalog</string>
-    <string name="moviecatalog">MovieCatalog</string>
+    <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
-    <string name="watch">Watch</string>
-    <string name="movie_name">Movie Name</string>
-    <string name="favorites">Favorites</string>
-    <string name="gallery">Gallery</string>
-    <string name="profile">profile</string>
-    <string name="main">main</string>
-    <string name="_9_0">9.0</string>
-    <string name="movie_name_txt">Movie Name Txt</string>
-    <string name="movie_year">Movie Year</string>
-    <string name="genre">Genre</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="main">Main</string>
+    <string name="login_failed">Login Failed</string>
 </resources>
