@@ -7,4 +7,9 @@
     <color name="bottom_nav_color">#1C1A19</color>
     <color name="bottom_nav_icon_text_color">#B7B7B7</color>
     <color name="add_review_color">#282828</color>
+    <color name="green">#2AA10F</color>
+    <color name="green_spring">#92E000</color>
+    <color name="yellow">#E1FF00</color>
+    <color name="orange">#F58B00</color>
+    <color name="red">#DE3700</color>
 </resources>

@@ -52,6 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/movie_year_country_txt" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/rating.card"
         android:layout_width="60dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
