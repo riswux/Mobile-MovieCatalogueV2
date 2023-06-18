@@ -94,13 +94,13 @@ class DetailMovieActivity : AppCompatActivity(), DeleteReviewClick, EditReviewCl
             Glide.with(this).load(response.poster).placeholder(R.drawable.placeholder).into(binding.movieDetailCoverImg)
             binding.movieDetailNameTxt.text = response.name
             binding.movieDescTxt.text = response.description
-           /* binding.yearTxt.text = response.year.toString()
+            binding.yearTxt.text = response.year.toString()
             binding.countryTxt.text = response.country
             binding.durationTxt.text = response.time.toString()
             binding.directorTxt.text = response.director
             binding.budgetTxt.text = convertCurrency(response.budget.toInt())
             binding.feesTxt.text = convertCurrency(response.budget.toInt())
-            binding.ageLimitTxt.text = response.ageLimit.toString() + "+" */
+            binding.ageLimitTxt.text = response.ageLimit.toString() + "+"
 
             binding.addReviewImg.isVisible = response.reviews.none { it.author.userId == userId }
 

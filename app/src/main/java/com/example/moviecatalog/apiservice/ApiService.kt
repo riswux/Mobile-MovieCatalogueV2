@@ -1,8 +1,10 @@
 package com.example.moviecatalog.apiservice
 
+import com.example.moviecatalog.apiservice.body.AddReviewBody
 import com.example.moviecatalog.apiservice.body.LoginBody
 import com.example.moviecatalog.apiservice.body.RegisterBody
 import com.example.moviecatalog.apiservice.body.UserBody
+import com.example.moviecatalog.apiservice.response.FavoritesResponse
 import com.example.moviecatalog.apiservice.response.LogoutResponse
 import com.example.moviecatalog.apiservice.response.MovieDetailResponse
 import com.example.moviecatalog.apiservice.response.MoviesResponse
@@ -34,6 +36,23 @@ interface ApiService {
     @POST("api/account/logout")
     suspend fun logout(): LogoutResponse
 
+    //favorite movies
+    @GET("api/favorites")
+    fun fetchFavorites(
+        @Header("Authorization") token: String
+    ): Call<Any>
+
+    @POST("api/favorites/{id}/add")
+    fun addFavorite(
+        @Header("Authorization") token: String,
+        @Path("id") id: String
+    ): Call<ResponseBody>
+
+    @DELETE("api/favorites/{id}/delete")
+    fun deleteFavorite(
+        @Header("Authorization") token: String,
+        @Path("id") id: String
+    ): Call<Any>
 
     //movies
     @GET("api/movies/{page}")
@@ -46,6 +65,28 @@ interface ApiService {
         @Path("id") id: String
     ): MovieDetailResponse
 
+    //review
+    @POST("api/movie/{movieId}/review/add")
+    fun addReview(
+        @Header("Authorization") token: String,
+        @Path("movieId") movieId: String,
+        @Body body: AddReviewBody
+    ): Call<ResponseBody>
+
+    @PUT("api/movie/{movieId}/review/{id}/edit")
+    fun editReview(
+        @Header("Authorization") token: String,
+        @Path("movieId") movieId: String,
+        @Path("id") id: String,
+        @Body body: AddReviewBody
+    ): Call<ResponseBody>
+
+    @DELETE("api/movie/{movieId}/review/{id}/delete")
+    fun deleteReview(
+        @Header("Authorization") token: String,
+        @Path("movieId") movieId: String,
+        @Path("id") id: String
+    ): Call<ResponseBody>
 
     @GET("api/account/profile")
     suspend fun getProfile(

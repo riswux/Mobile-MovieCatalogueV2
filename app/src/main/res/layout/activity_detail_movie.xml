@@ -85,7 +85,6 @@
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:text="Year"
                     android:textColor="@color/white_nerf" />
 
@@ -93,7 +92,6 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:text="Country"
                     android:textColor="@color/white_nerf" />
 
@@ -101,7 +99,6 @@
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:text="Duration"
                     android:textColor="@color/white_nerf" />
 
@@ -109,7 +106,6 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:text="Director"
                     android:textColor="@color/white_nerf" />
 
@@ -117,7 +113,6 @@
                     android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:text="Budget"
                     android:textColor="@color/white_nerf" />
 
@@ -125,7 +120,6 @@
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:text="Fees"
                     android:textColor="@color/white_nerf" />
 
@@ -133,7 +127,6 @@
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:text="Age Limit"
                     android:textColor="@color/white_nerf" />
             </LinearLayout>
@@ -150,49 +143,42 @@
                     android:id="@+id/year_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/country_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/duration_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/director_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/budget_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/fees_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/age_limit_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:textColor="@color/white" />
             </LinearLayout>
 
