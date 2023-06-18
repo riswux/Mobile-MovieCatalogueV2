@@ -3,6 +3,7 @@ package com.example.moviecatalog.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+
 import com.example.moviecatalog.apiservice.ApiConfig
 import com.example.moviecatalog.apiservice.body.LoginBody
 import com.example.moviecatalog.apiservice.response.AuthResponse
@@ -12,6 +13,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginViewModel : ViewModel() {
+
     private val loading = MutableLiveData(false)
     val getLoading: LiveData<Boolean> get() = loading
 
