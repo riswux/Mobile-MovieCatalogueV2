@@ -1,6 +1,7 @@
 package com.example.moviecatalog.detailmovie
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.ViewGroup
@@ -162,6 +163,10 @@ class DetailMovieActivity : AppCompatActivity(), DeleteReviewClick, EditReviewCl
         binding.favCard.setOnClickListener {
             viewModel.addFavorite(token, movieId)
             binding.favImg.setImageResource(R.drawable.baseline_favorite_24)
+        }
+
+        binding.backCard.setOnClickListener {
+               onBackPressed()
         }
 
     }

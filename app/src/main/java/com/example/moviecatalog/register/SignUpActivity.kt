@@ -113,15 +113,15 @@ class SignUpActivity : AppCompatActivity() {
             val email = binding.emailEdt.text.toString().trim()
             val name = binding.nameEdt.text.toString().trim()
             val password = binding.passwordEdt.text.toString().trim()
-            val birthDate = binding.birthEdt.text.toString().trim()
+            val birth = binding.birthEdt.text.toString().trim()
 
             if (binding.errMsgTxt.text.toString().isBlank()) {
                 val body = RegisterBody(
                     username,
                     email,
-                    name,
                     password,
-                    birthDate,
+                    name,
+                    birth,
                     if (isFemale) 1 else 0
                 )
                 viewModel.register(body)

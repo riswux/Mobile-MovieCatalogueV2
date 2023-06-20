@@ -5,6 +5,6 @@ data class RegisterBody(
     val name: String,
     val password: String,
     val email: String,
-    val birthDate: String,
+    val birth: String,
     val gender: Int
 )

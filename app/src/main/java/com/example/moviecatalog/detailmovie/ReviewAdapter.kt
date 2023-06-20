@@ -35,6 +35,18 @@ class ReviewAdapter(
             binding.dateReviewTxt.text = convertServerDateToUserTimeZone(review.createDateTime)
             binding.ratingReviewTxt.text = review.rating.toString()
 
+            if(review.rating <= 2) {
+                binding.ratingCard2.setCardBackgroundColor(itemView.context.resources.getColor(R.color.red, null))
+            } else if (review.rating <= 4) {
+                binding.ratingCard2.setCardBackgroundColor(itemView.context.resources.getColor(R.color.orange, null))
+            } else if (review.rating <= 6) {
+                binding.ratingCard2.setCardBackgroundColor(itemView.context.resources.getColor(R.color.yellow, null))
+            } else if (review.rating <= 8) {
+                binding.ratingCard2.setCardBackgroundColor(itemView.context.resources.getColor(R.color.green_spring, null))
+            } else {
+                binding.ratingCard2.setCardBackgroundColor(itemView.context.resources.getColor(R.color.green, null))
+            }
+
             if (userId != review.author.userId) {
                 binding.editReviewCard.isVisible = false
                 binding.deleteReviewCard.isVisible = false

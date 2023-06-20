@@ -33,7 +33,7 @@
         android:text="TextView"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/user_type_txt"
-        app:layout_constraintEnd_toStartOf="@+id/cardView3"
+        app:layout_constraintEnd_toStartOf="@+id/ratingCard2"
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/cardView" />
 
@@ -111,7 +111,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/ratingCard2"
         android:layout_width="35dp"
         android:layout_height="25dp"
         app:cardBackgroundColor="@color/main_color"
