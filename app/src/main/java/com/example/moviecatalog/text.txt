@@ -1,0 +1,18 @@
+Ini form soal ! Jadi nanti ada 2 tugas terkait projeck movie catalogue dan cara kerja MVVM
+
+- Tugas 1 (prioritas)
+
+You need to answer the questions about code and complete the task in the exam. (dapat dikerjakan di repo ini)
+(soal menyusul dibawah)
+
+
+
+
+
+
+
+
+
+- Tugas 2
+terkait MVVM (bisa dibuat repo baru)
+(soal menyusul dibawah)
