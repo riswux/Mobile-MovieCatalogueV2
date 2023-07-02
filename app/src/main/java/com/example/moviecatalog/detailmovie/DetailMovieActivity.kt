@@ -162,7 +162,7 @@ class DetailMovieActivity : AppCompatActivity(), DeleteReviewClick, EditReviewCl
 
         binding.favCard.setOnClickListener {
             viewModel.addFavorite(token, movieId)
-            binding.favImg.setImageResource(R.drawable.baseline_favorite_24)
+             binding.favImg.setImageResource(R.drawable.baseline_favorite_24)
         }
 
         binding.backCard.setOnClickListener {
